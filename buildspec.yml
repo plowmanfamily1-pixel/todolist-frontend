@@ -4,7 +4,7 @@ phases:
   build:
     commands:
       - npm i && npm run build
-      # Please change the s3 bucket URI
+      # Please change the s3 bucket URI h
       - aws s3 cp --recursive dist/ s3://repo-swp/
       # Please change the distribution id
       - aws cloudfront create-invalidation --distribution-id E1CU4FI689KD0L --paths "/*"
